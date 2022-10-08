@@ -9,11 +9,11 @@ output "user_pool_arn" {
 }
 
 output "pool_client_id" {
-  value = join("", aws_cognito_user_pool_client.default.*.id)
+  value = aws_cognito_user_pool_client.default.*.id
   description = "cognito pool client id"
 }
 
 output "pool_client_secret" {
-  value = join("", aws_cognito_user_pool_client.default.*.id)
+  value = aws_cognito_user_pool_client.default.*.id
   description = "cognito pool client id"
 }
